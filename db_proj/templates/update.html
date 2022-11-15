@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update_page</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <label for="id"></label>
+        <input type="text" value={{data_list.id}} name="eid">
+        <label for="name"></label>
+        <input type="text" value={{data_list.ename}} name="ename">
+        <label for="des"></label>
+        <input type="text" value={{data_list.e_des}} name="edes">
+        <label for="id"></label>
+        <input type="text" value={{data_list.e_sal}} name="sal">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

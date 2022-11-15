@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django db project</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+</head>
+<body>
+    <center> 
+           
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>designation</th>
+                <th>salary</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+    {% for data in data_list%}
+        <tbody>        
+            <tr>
+                <td>{{data.id}}</td>
+                <td>{{data.ename}}</td>
+                <td>{{data.e_des}}</td>
+                <td>{{data.e_sal}}</td>
+                <td ><a href="update/{{data.id}}">update</a></td>
+                <td><a href="delete/{{data.id}}">delete</a></td>
+            </tr>
+        </tbody>
+    {%endfor%}
+    </table><br>
+    <a href="home">click to add more</a>
+    </center>
+    
+</body>
+</html>
